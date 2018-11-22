@@ -56,6 +56,8 @@ class MainActivity : AppCompatActivity() {
                     val user = response.body()
                     if (user != null) {
                         Toast.makeText(this@MainActivity, "유저 로딩 성공 : " + response!!.code().toString(), Toast.LENGTH_LONG).show()
+                        var owner_image = user.user_image
+                        var owner_name = user.user_name
                     }
                 } else {
                     Toast.makeText(this@MainActivity, "유저 로딩 실패 : " + response!!.code().toString(), Toast.LENGTH_LONG).show()
